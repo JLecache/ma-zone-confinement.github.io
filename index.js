@@ -35,6 +35,15 @@ const isoAppData = {
         trackUserLocation: true
       })
 
+      // Add geolocate control to the map.
+map.addControl(
+  new mapboxgl.GeolocateControl({
+  positionOptions: {
+  enableHighAccuracy: true
+  },
+  trackUserLocation: true
+  })
+  );
 
 // Grab the elements from the DOM to assign interactivity
 const params = document.getElementById("timelimit");
